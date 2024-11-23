@@ -1,0 +1,21 @@
+{{>layouts/header}}
+
+{{#article}}    <!-- 추가 -->
+<form class="container" action="/articles/update" method="post">    <!-- 수정 -->
+    <input name="id" type="hidden" value="{{id}}">
+
+    <div class="mb-3">
+        <label class="form-label">Title</label>
+        <input type="text" class="form-control" name="title" value="{{title}}"> <!-- 수정 -->
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Content</label>
+        <textarea class="form-control" rows="3" name="content">{{content}}</textarea>   <!-- 수정 -->
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a href="/articles/{{id}}">Back</a>    <!-- 수정 -->
+</form>
+{{/article}}    <!-- 추가 -->
+
+{{>layouts/footer}}
